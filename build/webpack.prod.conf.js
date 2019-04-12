@@ -12,6 +12,9 @@ const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 const env = require('../config/prod.env')
+const chalk = require('chalk')
+
+console.log(chalk.cyan('  '+process.env.BASE_API+'  Build Start.\n'))
 
 const webpackConfig = merge(baseWebpackConfig, {
   module: {
